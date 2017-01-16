@@ -4,11 +4,6 @@
   "description": "Responsive Page that displays twitter feeds",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "scripts": {
     "production": "webpack -p",
     "dev": "webpack-dev-server --inline",
     "postinstall": "webpack --config ./webpack.config.js --progress --colors",
@@ -36,6 +31,7 @@
     "react-dom": "^15.4.1",
     "react-redux": "^5.0.1",
     "react-router": "^3.0.0",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "twitter": "^1.7.0"
   }
 }
