@@ -1,1 +1,6 @@
-compents
+components
+- twitter card
+  -photo
+  -name, tag, hours since posted
+  -description
+  -bottom info of heart, retweets, replys
