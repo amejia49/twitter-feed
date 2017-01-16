@@ -4,9 +4,9 @@ import { Avatar, Description } from '~/components'
 export default function CardFooter () {
   return (
     <div style={styles.cardFooter}>
-      <p> replys </p>
-      <p> retweets </p>
-      <p> hearts </p>
+      <p style={styles.text}> replys </p>
+      <p style={styles.text}> retweets </p>
+      <p style={styles.text}> hearts </p>
     </div>
   )
 }
@@ -14,6 +14,8 @@ export default function CardFooter () {
 const styles= {
   cardFooter:{
     display: 'flex',
-    justifyContent: 'space-around'
+  },
+  text: {
+    paddingLeft: '10px'
   }
 }
