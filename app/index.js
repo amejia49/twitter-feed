@@ -6,7 +6,7 @@ import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import * as reducers from './redux/modules'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = compose;
 const store = createStore(combineReducers(reducers), composeEnhancers(
   applyMiddleware(thunk)
 ));
