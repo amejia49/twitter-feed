@@ -3,9 +3,13 @@ React Twitter Feed with Node Backend
 
 #Description
 ---
-Mobile First - Responsive Twitter Feed that live streams tweets related to Javascript.
+Twitter Feed that live streams tweets related to Javascript.
 React Frontend, Node Backend -- Utilizes Redux for state
 
+##Mobile First Design
+* Uses media queries and flexbox for a truely responsive layput
+
+#To Start
 To run locally
 First create a folder called config in root directory and add the twitter.js file I supplied, or supply own credentials. Should appear as such
 
