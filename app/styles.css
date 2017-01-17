@@ -1,0 +1,13 @@
+/* mobile */
+.card{
+  flex: 1 100%;
+}
+
+@media screen and (min-width: 768px) {
+    /* For desktop: */
+    .card{
+      min-width: 300px;
+      max-width: 300px;
+      margin-top:30px;
+    }
+  }

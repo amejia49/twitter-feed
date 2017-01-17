@@ -1,8 +1,9 @@
 var path = require('path')
 var express = require('express')
 var Twitter = require('twitter')
+var twitterConfig = require('./config/twitter')
 var app = new express()
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 5000
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
@@ -19,20 +20,15 @@ app.listen(port, function(error) {
   }
 });
 
-var twitter = new Twitter({
-  consumer_key: process.env.TWITTER_CONSUMER_KEY,
-  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-  access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
-});
+var twitter = new Twitter(twitterConfig)
 
-twitter.stream('statuses/filter', {track: 'javascript'}, function(stream) {
-  stream.on('data', function(event) {
-    console.log('event', event)
-    console.log(event && event.text);
-  });
-
-  stream.on('error', function(error) {
-    throw error;
-  });
-});
+// twitter.stream('statuses/filter', {track: 'javascript'}, function(stream) {
+//   stream.on('data', function(event) {
+//     console.log('event', event)
+//     console.log(event && event.text);
+//   });
+//
+//   stream.on('error', function(error) {
+//     throw error;
+//   });
+// });
