@@ -24,6 +24,7 @@
     "http-server": "^0.9.0",
     "redux-devtools-extension": "^1.0.0",
     "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
@@ -37,7 +38,6 @@
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
     "socket.io": "^1.7.2",
-    "twitter": "^1.7.0",
-    "webpack": "^1.14.0"
+    "twitter": "^1.7.0"
   }
 }
