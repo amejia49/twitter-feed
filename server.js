@@ -3,7 +3,7 @@ var express = require('express')
 var http = require('http')
 var Twitter = require('twitter')
 var app = new express()
-var port = 5000
+var port = process.env.PORT || 5000
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
