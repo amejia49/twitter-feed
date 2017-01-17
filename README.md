@@ -7,7 +7,7 @@ Twitter Feed that live streams tweets related to Javascript.
 React Frontend, Node Backend -- Utilizes Redux for state
 
 ##Mobile First Design
-* Uses media queries and flexbox for a truely responsive layput
+* Uses media queries and flexbox for a truely responsive layout
 
 #To Start
 To run locally
