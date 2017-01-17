@@ -7,8 +7,7 @@ Mobile First - Responsive Twitter Feed that live streams tweets related to Javas
 React Frontend, Node Backend -- Utilizes Redux for state
 
 To run locally
-1. npm install
-2. create a folder called config in root directory and add the twitter.js file I supplied, or supply own credentials. Should appear as such..
+First create a folder called config in root directory and add the twitter.js file I supplied, or supply own credentials. Should appear as such
 
   ```javascript
   //config/twitter.js
@@ -21,6 +20,7 @@ To run locally
 
   module.exports = config
   ```
-3. npm run start
-4. navigate to localhost:5000 or whichever port terminal says
-5. enjoy!
+1. npm install
+2. npm run start
+3. navigate to localhost:5000 or whichever port terminal says
+4. enjoy!
