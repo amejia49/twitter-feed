@@ -2,11 +2,21 @@
 .card{
   flex: 1 100%;
 }
+.content{
+  width: 100%;
+}
+
+.text-secondary{
+  color: #8899A9
+}
 @media screen and (min-width: 768px) {
     /* For desktop: */
     .card{
-      min-width: 300px;
-      max-width: 300px;
+      min-width: 400px;
+      max-width: 400px;
       margin-top:30px;
+    }
+    .content{
+      width:350px;
     }
   }

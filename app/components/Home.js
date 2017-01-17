@@ -1,15 +1,16 @@
 import React, { PropTypes, Component } from 'react'
-import { Card } from './components'
+import { Card } from '~/components'
 
-export default function Home () {
+Home.propTypes = {
+  twtIds: PropTypes.array.isRequired,
+  tweets: PropTypes.object.isRequired
+}
+export default function Home (props) {
   return (
     <div style={styles.container}>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
+      {props.twtIds.map((id)=>{
+        return <Card key={id} {...props.tweets[id]} />
+      })}
     </div>
   )
 }

@@ -1,9 +1,9 @@
 import React, { PropTypes, Component } from 'react'
 
-export default function Avatar () {
+export default function Avatar (props) {
   return (
     <img  style={styles.avatar}
-          src="https://pbs.twimg.com/profile_images/620944907063001088/mG7SBy1v_bigger.png"
+          src={props.avatar}
           alt=""/>
   )
 }

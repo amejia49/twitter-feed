@@ -1,13 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import getRoutes from './config/routes'
-import { createStore, combineReducers } from 'redux'
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import * as reducers from './redux/modules'
 
-// const sagaMiddleware = createSagaMiddleware()
-const preloadedState = window.__PRELOADED_STATE__
-const store = createStore(combineReducers(reducers), preloadedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(combineReducers(reducers), composeEnhancers(
+  applyMiddleware(thunk)
+));
 
 ReactDOM.render(
   <Provider store={store}>

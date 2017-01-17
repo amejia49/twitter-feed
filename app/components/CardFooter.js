@@ -1,12 +1,17 @@
 import React, { PropTypes, Component } from 'react'
 import { Avatar, Description } from '~/components'
+require('~/styles.css')
 
-export default function CardFooter () {
+CardFooter.propTypes = {
+  retweetCount: PropTypes.number,
+  favoriteCount: PropTypes.number
+}
+
+export default function CardFooter (props) {
   return (
     <div style={styles.cardFooter}>
-      <p style={styles.text}> replys </p>
-      <p style={styles.text}> retweets </p>
-      <p style={styles.text}> hearts </p>
+      <p style={styles.text} className="text-secondary"> {props.retweetCount} retweets</p>
+      <p style={styles.text} className="text-secondary"> {props.favoriteCount} favorites</p>
     </div>
   )
 }

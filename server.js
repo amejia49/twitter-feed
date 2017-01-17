@@ -35,7 +35,8 @@ twitter.stream('statuses/filter', {track: 'javascript'}, function(stream) {
   });
 
   stream.on('error', function(error) {
-    throw error;
+    io.emit('error', error)
+    console.log('error',error)
   });
 });
 module.exports = io

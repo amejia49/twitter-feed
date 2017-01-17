@@ -2,14 +2,25 @@ import React, { PropTypes, Component } from 'react'
 import { Avatar, Description, CardFooter, CardHeader } from '~/components'
 require('~/styles.css')
 
-export default function Card () {
+export default function Card (props) {
+  const {
+    author, avatar,
+    body, date,
+    favoriteCount,
+    retweetCount,
+    screenname } = props
+
   return (
     <div style={styles.card} className="card">
-      <Avatar/>
-      <div style={styles.content}>
-        <CardHeader/>
-        <Description/>
-        <CardFooter/>
+      <Avatar avatar={avatar}/>
+      <div style={styles.content} className="content">
+        <CardHeader
+          author={author}
+          screenname={screenname}
+          date={date}
+        />
+        <Description body={body}/>
+        <CardFooter favoriteCount={favoriteCount} retweetCount={retweetCount}/>
       </div>
     </div>
   )
@@ -17,8 +28,8 @@ export default function Card () {
 
 const styles= {
   content: {
-    flex:1,
     display: 'flex',
+    flexGrow: 1,
     flexDirection:'column'
   },
   card:{
