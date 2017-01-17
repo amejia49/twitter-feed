@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import getRoutes from '~/config/routes'
+import getRoutes from './config/routes'
 import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
-import * as reducers from '~/redux/modules'
+import * as reducers from './redux/modules'
 
 // const sagaMiddleware = createSagaMiddleware()
 const preloadedState = window.__PRELOADED_STATE__

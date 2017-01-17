@@ -7,14 +7,11 @@
     "production": "webpack -p",
     "dev": "webpack-dev-server --inline",
     "postinstall": "webpack --config ./webpack.config.js --progress --colors",
-    "start": "node ./server.js",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "start": "node ./server.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@kadira/storybook": "^2.21.0",
     "babel-core": "^6.20.0",
     "babel-loader": "^6.2.9",
     "babel-preset-es2015": "^6.18.0",
@@ -36,6 +33,7 @@
     "react-redux": "^5.0.1",
     "react-router": "^3.0.0",
     "redux": "^3.6.0",
+    "socket.io": "^1.7.2",
     "twitter": "^1.7.0"
   }
 }

@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react'
-import { Card } from '~/components'
+import { Card } from './components'
 
 export default function Home () {
   return (
