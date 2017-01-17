@@ -25,7 +25,7 @@ Replace config object located in server.js with twitter credentials I supplied t
   };
   ```
 1. npm install
-2. npm run start
+2. npm run dev
 3. navigate to localhost:5000 or whichever port terminal says
 4. enjoy!
 
