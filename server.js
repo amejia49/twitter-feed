@@ -2,7 +2,6 @@ var path = require('path')
 var express = require('express')
 var http = require('http')
 var Twitter = require('twitter')
-var twitterConfig = require('./config/twitter')
 var app = new express()
 var port = 5000
 
@@ -16,7 +15,14 @@ var server = http.createServer(app).listen(port, function() {
   console.log('Express server listening on port ' + port);
 });
 
-var twitter = new Twitter(twitterConfig)
+var config = {
+  consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  access_token_key: process.env.TWITTER_ACCESS_KEY,
+  access_token_secret: process.env.TWITTER_TOKEN_SECRET
+};
+
+var twitter = new Twitter(config)
 var io = require('socket.io').listen(server);
 
 twitter.stream('statuses/filter', {track: 'javascript'}, function(stream) {
