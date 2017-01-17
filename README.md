@@ -3,15 +3,17 @@ React Twitter Feed with Node Backend
 
 #Description
 ---
+
+Deployed at: http://rocky-taiga-74001.herokuapp.com/#/
+
 Twitter Feed that live streams tweets related to Javascript.
 React Frontend, Node Backend -- Utilizes Redux for state
 
 ##Mobile First Design
 * Uses media queries and flexbox for a truely responsive layout
 
-#To Start
-To run locally
-First create a folder called config in root directory and add the twitter.js file I supplied, or supply own credentials. Should appear as such
+#To Start Locally
+Replace twitter credentials located in server.js with ones I supplied through email, or supply own credentials. Should appear as such
 
   ```javascript
   //config/twitter.js
